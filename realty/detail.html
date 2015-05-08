@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/jquery.min.js" type=text/javascript></script>
+<script type="text/javascript" src="js/jquery-code.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/roll.js"></script>
+<script type="text/javascript" src="js/star.js"></script>   
+<link rel="stylesheet" type="text/css" href="css/public_head.css"/>
+<link rel="stylesheet" type="text/css" href="css/public_foot.css"/>
+<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+<link rel="stylesheet" type="text/css" href="css/roll.css"/>
+
+</head>
+
+<body>
+<!---------------------------header-------------------------------------->
+<div id="headers">
+  <div id="information_bar">
+     <div id="info">
+       <div id="info_left">
+         <li>List your property</li>
+         <li>Booking a property</li>
+       </div>
+       <div id="info_right">
+         <li><a href="l-r.html"><span>Login</span><span style="padding-left:45px;">Register</span></a></li>
+       </div>
+     </div>
+  </div>
+  <div id="backgroundItem">
+     <div id="navigation_bar">
+       <div id="nav">
+         <div id="nav_left">
+         <span><a href="index.html"><img src="images/logo.png" /></a></span>
+         </div>
+         <div id="nav_right">
+           <ul>        
+             <li class="c1"><a href="#" id="menv1" >TOOLS</a></li>
+             <li class="c2"><a href="new-launch.html"  id="menv2">NEW LAUNCH</a></li>
+             <li class="c3"><a href="commercial.html"  id="menv3">COMMERCIAL</a></li>
+             <li class="c4"><a href="condos.html"  id="menv4">CONDOS</a></li>
+             <li class="c5"><a href="HDB.html"  id="menv5">HDB</a></li>
+             <li class="c6"><a href="index.html"   id="menv6">HOME</a></li>
+           </ul>
+         </div>
+       </div>    
+     </div>
+     <div id="location">
+       <a>HOME<img src="images/arrows.png" />PROPERTY DETAIL</a>
+     </div>
+   </div>
+</div>
+<div class="clear"></div>
+<!----------------------------content------------------------------------>
+<div id="content">
+  <div id="content_midbody">
+    <div id="content_left" >
+      <div id="top">
+        <div id="div1">
+        <img id="img" src="images/home detail/k1.jpg" />
+        <div class="div1">
+          <p class="div1_left">Chelobitevskoe highway</p>
+          <p class="div1_right"><span>For Rent</span><span>$2,200 Per Month - Apartment</span></p>
+        </div>
+        </div>
+        <div id="div2">
+          <div class="rollBox">
+           <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
+           <div class="Cont" id="ISL_Cont">
+            <div class="ScrCont">
+             <div id="List1">
+              <!-- 图片列表 begin -->
+               <div class="pic">
+                <img id="1" src="images/home detail/2.png" onClick="changeImg(this.id)"/>
+               </div>       
+               <div class="pic">
+                <img id="2" src="images/home detail/3.png" onClick="changeImg(this.id)"/>
+               </div>
+               <div class="pic">
+                <img id="3" src="images/home detail/4.png" onClick="changeImg(this.id)"/>
+               </div>
+               <div class="pic">
+                <img id="4" src="images/home detail/5.png" onClick="changeImg(this.id)"/>
+               </div>
+               <div class="pic">
+                <img id="5" src="images/home detail/6.png" onClick="changeImg(this.id)"/>
+               </div>
+               <div class="pic">
+                <img id="6" src="images/home detail/2.png" onClick="changeImg(this.id)"/>
+               </div>      
+               <div class="pic">
+                <img id="7" src="images/home detail/3.png" onClick="changeImg(this.id)"/>
+               </div>
+               <script>
+				function changeImg(id)
+				{
+				 var bigimg = document.getElementById("img");
+				 bigimg.src="images/home detail/k"+id+".jpg";
+				
+				}
+				</script>
+              <!-- 图片列表 end -->
+             </div>
+             <div id="List2"></div>
+            </div>
+           </div>
+           <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>
+          </div>
+          <p style=" margin:11px 45px; color:#919292; font-size:13px; font-weight:bolder;">Сountry house in Stolbovaya settlement,Chekhovsky Region 5 Grove Avenue, Everard Park .</p>
+          <div class="data">
+             <div style="width:100px"><li><img src="images/size.png" /></li><li> 5000 Aq Ft</li></div>
+             <div><li><img src="images/bedrooms.png" /></li><li>3 Bedrooms</li></div>
+             <div style="width:114px"><li><img src="images/bathronms.png" /></li><li>2 Bathrooms</li></div>
+             <div><li><img src="images/floor.png" /></li><li>9 floot of 14</li></div>
+          </div>
+          <div id="div2_box">
+            <p class="choose1"><a href="#box_content1">General</a></p>
+            <p class="choose2"><a href="#box_content2">Additional</a></p>
+            <p class="choose2"><a href="#box_content3">Comments(12)</a></p>
+            <p class="choose2"><a href="#box_content4">Map</a></p>
+            <div class="clear"></div>
+            <div id="box_content1">
+              <p>General</p>
+              <div>
+                <li><p class="p1">Floor:</p><p class="p2">6 floor of 14 total</p></li>
+                <li><p class="p1">Total square:</p><p class="p2">58 m2</p></li>
+                <li><p class="p1">Number of berths:</p><p class="p2">2+1</p></li>
+                <li ><p class="p1">View:</p><p class="p2">Street view</p></li>
+                <li><p class="p1" style=" height:38px">Description:</p><p class="p2"  style=" height:38px">This apartment will inspire you for new achievements. There is a separate living room . 
+                Where you can comfortably meet colleagues or relax with friends.</p></li> 
+                <li><p class="p1">Near:</p><p class="p2">Within 3 minutes walk form Prospekt Mira metro station</p></li>
+                <li><p class="p1">Address:</p><p class="p2">Moscow,Gilyarovsky St,20</p></li>
+              </div>     
+            </div>
+            <div id="box_content2">
+              <p>Additional</p>
+              <div id="detail">
+                 <div>
+                   <p>Security</p>
+                   <li><a href="">coded lock</a></li>
+                   <li><a href="">metal door to the vestibule</a></li>
+                   <li><a href="">metal front door</a></li>
+                 </div>
+                 <div>
+                   <p>SComfor</p>
+                   <li><a href="">dryer for linen</a></li>
+                   <li><a href="">plastic windows</a></li>
+                   <li><a href="">dense curtains for a comfortable dream</a></li>
+                   <li><a href="">splendid view</a></li>
+                   <li><a href="">quiet area</a></li>
+                   <li><a href="">iron</a></li>
+                   <li><a href="">ironing table</a></li>
+                   <li><a href="">intercom</a></li>
+                 </div>
+                 <div>
+                   <p>Kitchen</p>
+                   <li><a href="">water filter</a></li>
+                   <li><a href="">electric kettle</a></li>
+                   <li><a href="">verything for food intake</a></li>
+                   <li><a href="">3-person dining table</a></li>
+                   <li><a href="">tea.coffee,sugar</a></li>
+                   <li><a href="">microwave oven</a></li>
+                   <li><a href="">extract</a></li>
+                   <li><a href="">plate</a></li>
+                   <li><a href="">refrigerator</a></li>
+                 </div>
+                 <div>
+                   <p>Bathroom</p>
+                   <li><a href="">water filter</a></li>
+                   <li><a href="">electric kettle</a></li>
+                   <li><a href="">everything for food intake</a></li>
+                   <li><a href="">3-person dining table</a></li>
+                   <li><a href="">tea.coffee,sugar</a></li>
+                   <li><a href="">microwave oven</a></li>
+                   <li><a href="">extract</a></li>
+                   <li><a href="">plate</a></li>
+                   <li><a href="">refrigerator</a></li>
+                 </div>
+                 <div>
+                   <p>Work</p>
+                   <li><a href="">water filter</a></li>
+                   <li><a href="">electric kettle everything for food intake</a></li>
+                   <li><a href="">3-person dining table</a></li>
+                 </div>
+                 <div>
+                   <p>Entertainment</p>
+                   <li><a href="">water filter</a></li>
+                   <li><a href="">electric kettle</a></li>
+                   <li><a href="">everything for food intake</a></li>
+                   <li><a href="">3-person dining table</a></li>
+                 </div>           
+              </div>
+            </div>
+            <div id="box_content3">
+              <p>Comments</p>
+              <div id="comment">
+                <div>
+                   <div class="comment_d1">
+                    <span>
+                      <p class="div4_d1">The Woodgrove</p>
+                      <p class="star"><img  src="images/star4.png" /></p>
+                      <p class="div4_d2">Posted on June 3, 2014 by</p>
+                      <p class="div4_d3">Mr. Dominik Ulrich<input type="button" value="(3)"  id="good"/></p>
+                    </span>
+                  </div>
+                  <div class="comment_d1">
+                    <span>
+                      <p class="div4_d1">The Woodgrove</p>
+                      <p class="star"><img  src="images/star4.png" /></p>
+                      <p class="div4_d2">Posted on June 3, 2014 by</p>
+                      <p class="div4_d3">Mr. Dominik Ulrich<input type="button" value="(3)"  id="good"/></p>
+                    </span>
+                  </div>
+                  <div class="comment_d1">
+                    <span>
+                      <p class="div4_d1">The Woodgrove</p>
+                      <p class="star"><img  src="images/star4.png" /></p>
+                      <p class="div4_d2">Posted on June 3, 2014 by</p>
+                      <p class="div4_d3">Mr. Dominik Ulrich<input type="button" value="(3)"  id="good"/></p>
+                    </span>
+                  </div>
+                  <div class="comment_d1">
+                    <span>
+                      <p class="div4_d1">The Woodgrove</p>
+                      <p class="star"><img  src="images/star4.png" /></p>
+                      <p class="div4_d2">Posted on June 3, 2014 by</p>
+                      <p class="div4_d3">Mr. Dominik Ulrich<input type="button" value="(3)"  id="good"/></p>
+                    </span>
+                  </div>
+                  <div class="comment_d1">
+                    <span>
+                      <p class="div4_d1">The Woodgrove</p>
+                      <p class="star"><img  src="images/star4.png" /></p>
+                      <p class="div4_d2">Posted on June 3, 2014 by</p>
+                      <p class="div4_d3">Mr. Dominik Ulrich<input type="button" value="(3)"  id="good"/></p>
+                    </span>
+                  </div>
+                </div>
+                <div class="page"><img src="images/page.png" /></div>
+                <div class="clear"></div>
+                <div class="comment_d2">
+                  <p class="div4_d1">Comments:</p>
+                  <form>
+                    <div id="star_div">
+                        <div id="star_box">
+                            <ul class="star" id="star">
+                                <li><a href="javascript:void(0)" title="1" class="s1">1</a></li>
+                                <li><a href="javascript:void(0)" title="2" class="s2">2</a></li>
+                                <li><a href="javascript:void(0)" title="3" class="s3">3</a></li>
+                                <li><a href="javascript:void(0)" title="4" class="s4">4</a></li>
+                                <li><a href="javascript:void(0)" title="5" class="s5">5</a></li>
+                            </ul>
+                            <div class="star_box_choose" id="showb"></div>
+                        </div>
+                    </div>
+                    <div style="margin:0;">
+                      <textarea style="width:780px; height:130px; margin-top:10px;" name="text"  class="text"></textarea>
+                    </div>
+                    <div style="float:right; margin-top:20px"><a href="#" id="search">Search</a></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="box_content4">
+              <p>Map</p>
+              <div id="map">
+                <img src="images/home detail/map.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="buttom">
+        <div id="similar">
+          <p>Similar Properties</p>
+          <div>
+            <span>
+              <p id="mid_browse_z1"><img  src="images/sale.png" /></p>
+              <p id="mid_browse_z2"><img src="images/index/img_1.png" /></p> 
+            </span>
+            <span>
+              <p id="mid_browse_z5">15421 Southwest 39th Terrace</p>
+              <p id="mid_browse_z3">
+                 Lorem ipsum dolor amet, consectetuer,
+                 adipiscing elit, send diam... 
+                 <a href="detail.html" >More Details &nbsp;&nbsp;<img src="images/link.png" /></a>
+              </p>
+              <p id="mid_browse_z4">$3,850 Per Month</p>
+            </span> 
+          </div>
+          <div>
+            <span>
+              <p id="mid_browse_z1"><img src="images/sale.png" /></p>
+              <p id="mid_browse_z2"><img src="images/index/img_1.png" /></p> 
+            </span>
+            <span>
+              <p id="mid_browse_z5">15421 Southwest 39th Terrace</p>
+              <p id="mid_browse_z3">
+                 Ut wisi enim ad minim veniam, quis nostrud exerci tation...
+                <a href="detail.html" >More Details &nbsp;&nbsp;<img src="images/link.png" /></a>
+              </p>
+              <p id="mid_browse_z4">$3,850 Per Month</p>
+            </span> 
+          </div>
+          <div>
+            <span>
+              <p id="mid_browse_z1"><img src="images/sale.png" /></p>
+              <p id="mid_browse_z2"><img src="images/index/img_1.png" /></p> 
+            </span>
+            <span>
+              <p id="mid_browse_z5">15421 Southwest 39th Terrace</p>
+              <p id="mid_browse_z3">
+                 Ut wisi enim ad minim veniam, quis nostrud exerci tation...
+                <a href="detail.html" >More Details &nbsp;&nbsp;<img src="images/link.png" /></a>
+              </p>
+              <p id="mid_browse_z4">$3,850 Per Month</p>
+            </span> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content_right" >
+     <form>
+      <div id="content_right_search">
+     
+      <input type="text" id="search_text" value="Find Your Home" /><input type="button" id="search_button" />
+      <p>Rent or Sale</p>
+                  <select name="select" id="select1">
+                   <option selected="selected">any</option>
+                   <option>bbbbb</option>
+                   <option>cccccc</option>
+                   <option>ddddd</option>
+                  </select>
+      <p>HDB type</p>
+                  <select name="select" id="select1">
+                   <option selected="selected">any</option>
+                   <option>bbbbb</option>
+                   <option>cccccc</option>
+                   <option>ddddd</option>
+                  </select>
+      <p>Locations</p>
+                  <select name="select" id="select1">
+                   <option selected="selected">any</option>
+                   <option>bbbbb</option>
+                   <option>cccccc</option>
+                   <option>ddddd</option>
+                  </select>
+      <p>Sq ft</p>
+                  <select name="select" id="select1">
+                   <option selected="selected">any</option>
+                   <option>bbbbb</option>
+                   <option>cccccc</option>
+                   <option>ddddd</option>
+                  </select>
+      <div style=" height:170px;">
+        <div style="width:120px; float:left; margin-right:10px">
+          <p>Beds</p>
+                    <select name="select" id="select2">
+                     <option selected="selected">any</option>
+                     <option>bbbbb</option>
+                     <option>cccccc</option>
+                     <option>ddddd</option>
+                    </select>
+        </div>
+        <div style="width:120px; float:left;">
+          <p>Baths</p>
+                    <select name="select" id="select2">
+                     <option selected="selected">any</option>
+                     <option>bbbbb</option>
+                     <option>cccccc</option>
+                     <option>ddddd</option>
+                    </select>
+        </div>
+        <div style="width:120px; float:left; margin-right:10px;">
+          <p>Min price</p>
+                    <select name="select" id="select2">
+                     <option selected="selected">any</option>
+                     <option>bbbbb</option>
+                     <option>cccccc</option>
+                     <option>ddddd</option>
+                    </select>
+        </div>
+        <div style="width:120px; float:left;">
+          <p>Max price</p>
+                    <select name="select" id="select2">
+                     <option selected="selected">any</option>
+                     <option>bbbbb</option>
+                     <option>cccccc</option>
+                     <option>ddddd</option>
+                    </select>
+        </div>                                       
+      </div>
+        <div><a href="#" id="search">Search</a></div>
+      </div> 
+      </form>
+      <div id="agent">
+        <p>Listed By</p>
+        <div>
+          <p><a href="agent-detail.html">Julia Robert</a></p>
+          <a href="agent-detail.html"><img src="images/home detail/agent.png" /></a>
+          <p class="agent_p1">Office:041-456-3692</p>
+          <p class="agent_p2">Mobile:0200-123-4567</p>
+          <p class="agent_p3">Fax:041-789-4561</p>
+        </div>
+      </div>
+      <div id="featured">
+        <p>Featured Propertiws</p>
+        <div>
+            <img src="images/index/img_1.png" /> 
+            <p class="featured_p1">Chelobitevskoe highway</p>
+            <p class="featured_p2">
+              Сountry house in Stolbovaya settlement, Chekhovsky ...
+              <a href="detail.html" >More Details </a>
+            </p>
+            <p class="featured_p3">$3,850 Per Month</p>
+            <img src="images/index/img_1.png" /> 
+            <p class="featured_p1">Chelobitevskoe highway</p>
+            <p class="featured_p2">
+              Сountry house in Stolbovaya settlement, Chekhovsky ...
+              <a href="detail.html" >More Details </a>
+            </p>
+            <p class="featured_p3">$3,850 Per Month</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="clear"></div>
+</div>
+<input name="menvitem" type="hidden" id="menvitem" value="6" />
+<!----------------------------footer------------------------------------>
+
+<div id="footer">
+  <div id="footer_top">
+    <div id="footer_top_mid">
+    <div>
+    <p><img src="images/logo.png"/></p>
+    <li>This is gravida vel version of Lorem Ipsum.</li>
+    <li>proin gravida nibh vel velit auctor aliquet.</li>
+    <li>Aenean sollicitudin lorem quis.</li>
+    </div>
+    <div>
+    <p>Recent Posts</p>
+    <li><img src="images/arrows.png" />New Search Platform Update</li>
+    <li><img src="images/arrows.png" />Platform Most Wante-$5,000 for Ghost Platform</li>
+    <li><img src="images/arrows.png" />Update: version of Lorem Submission Requirements</li>
+    </div>
+    <div style="width:280px;">
+    <p>Contact Info</p>
+    <li class="f1">65 123 456 789</li>
+    <li class="f2"><a href="">admin@ministryofsingaporeproperty.com</a></li>
+    <li class="f3">900 123 456 789</li>
+    </div>
+    <div>
+    <p>Newsletter</p>
+    <li>This is gravida vel version of Lorem Ipsum.</li>
+    <li>proin gravida nibh vel velit auctor aliquet.</li>
+    <li><input type="text" id="text" value="e-mail" /><input type="submit" id="submit" value="submit" /></li>
+    </div>
+    </div>
+  </div>
+  <div id="footer_bottom"><span> ©</span> 2014 Real Estate,All Rights Reserved</div>
+</div>
+</body>
+</html>

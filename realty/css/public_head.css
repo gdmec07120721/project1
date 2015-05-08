@@ -1,0 +1,178 @@
+body,#header,#information_bar,#background,#navigation_bar,#content,#footer,#footer_bottom{
+	width:100%;
+	margin:0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#headers{
+	height:251px;
+}
+#information_bar{
+	height:51px;
+	background-image:url(../images/head_status.png);
+	background-repeat:repeat-x;
+}
+#info,#nav{
+	height:51px;
+	width:1170px;
+	margin:0 auto;
+}
+#info_left li{
+	margin-top:15px;
+	float:left;
+	list-style-type:none;
+	margin-right:40px;
+	color:#ffffff;
+	font-size:13px;
+	font-weight:bolder;
+}
+#info_right span{
+	padding-left:25px;
+}
+#info_right li{
+	width:160px;
+	margin-top:15px;
+	float:right;
+	margin-left:40px;
+	color:#ffffff;
+	font-size:13px;
+	list-style-type:none;
+}
+#info_right li a{
+	color:#ffffff;
+	text-decoration:none;
+	font-weight:bolder;
+	background-image:url(../images/login2.png);
+	background-repeat:no-repeat;	
+}
+#info_right li a:hover{
+	color:#3c3c3c;	
+	background-image:url(../images/loginchoose.png);
+	background-repeat:no-repeat;
+}
+#background{
+	height:638px;
+	background-image:url(../images/picture.png);
+	position:absolute;	
+}#backgroundItem{
+	height:200px;
+	width:100%;
+	background-image:url(../images/picture.png);
+	position:absolute;	
+}
+#navigation_bar{
+	height:107px;
+	background-color:#000;
+	background: rgba(0, 0, 0, 0.5) !important;  /*IE无效，FF有效 */
+    background: #000;
+    filter: alpha(opacity=60);/* IE6及以上 */
+}
+#nav_left{
+	margin-top:30px;
+	float:left;
+	
+}
+#navigation_bar span{
+	position:relative;
+}
+#nav_right ul{
+	position:relative;
+	margin:0 auto;
+}
+#nav_right li{
+	margin-left:10px;
+	text-align:center;
+	margin-top:45px;
+	float:right;
+	list-style-type:none;
+	font-size:15px;
+	font-weight:bolder;
+	position:relative;
+}
+#nav_right .c1{
+	width:70px;
+}
+#nav_right .c2{
+	width:140px;
+}
+#nav_right .c3{
+	width:130px;
+
+}
+#nav_right .c4{
+	width:90px;
+}
+#nav_right .c5{
+	width:60px;
+}
+#nav_right .c6{
+	width:70px;
+}
+#nav_right li a{
+	color:#ffffff;
+	text-decoration:none;
+}
+#nav_right li a:hover{
+	color:#000;
+	background-color:#FFF;
+	border-radius: 7px;
+	padding: 12px 9px;
+}
+
+#nav_right li a.c11{
+	color:#000;
+	background-color:#FFF;
+	border-radius: 7px;
+	padding: 12px 9px;
+}
+#nav_right li a.c12{
+	color:#000;
+	background-color:#FFF;
+	border-radius: 7px;
+	padding: 12px 9px;
+}
+#nav_right li a.c13{
+	color:#000;
+	background-color:#FFF;
+	border-radius: 7px;
+	padding: 12px 9px;
+}
+#nav_right li a.c14{
+	color:#000;
+	background-color:#FFF;
+	border-radius: 7px;
+	padding: 12px 9px;
+}#nav_right li a.c15{
+	color:#000;
+	background-color:#FFF;
+	border-radius: 7px;
+	padding: 12px 9px;
+}
+#nav_right li a.c16{
+	color:#000;
+	background-color:#FFF;
+	border-radius: 7px;
+	padding: 12px 9px;
+}
+#location{
+	width:1170px;
+	margin:50px auto;
+}
+#location a{
+	margin-top:30px;
+	font-weight:bold;
+	font-size:14px;
+	color:#FFF;
+    border-radius: 7px;
+	padding: 12px 9px;
+	background-color:#3aa8cb !important;
+	background: rgba(57, 185, 224, 0.9) !important;  /*IE无效，FF有效 */
+    filter: alpha(opacity=90);/* IE6及以上 */
+	list-style-type:none;
+	text-decoration:none;
+}
+#location img{
+	margin:0 10px;
+}
+
+
+

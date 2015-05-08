@@ -1,0 +1,44 @@
+.rollBox{
+	width:860px;
+	overflow:hidden;
+	padding:12px 0 5px 0px;
+	margin-left:40px;
+}
+.rollBox .LeftBotton{
+	height:51px;
+	width:41px;
+    overflow:hidden;
+	float:left;
+	display:inline;
+	margin-top:15px;
+	background-image:url(../images/home%20detail/left-arow.png);
+}
+.rollBox .RightBotton{
+	height:51px;
+	width:41px;
+	float:left;
+	display:inline;
+	margin-top:15px;
+	background-image:url(../images/home%20detail/right-arow.png);
+}
+.rollBox .Cont{
+	width:693px;
+	overflow:hidden;
+	float:left;
+}
+.rollBox .ScrCont{
+	width:10000000px;
+}
+.rollBox .Cont .pic{
+	width:120px;
+	float:left;
+	margin:0 20px 0 0;
+}
+.rollBox .Cont .pic img{
+	padding:4px;
+	background:#fff;
+	margin:0 auto;
+}
+.rollBox #List1,.rollBox #List2{
+	float:left;
+}

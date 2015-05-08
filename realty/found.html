@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/jquery.min.js" type=text/javascript></script>
+<script type="text/javascript" src="js/jquery-code.js"></script> 
+<link rel="stylesheet" type="text/css" href="css/public_head.css"/>
+<link rel="stylesheet" type="text/css" href="css/public_foot.css"/>
+<link rel="stylesheet" type="text/css" href="css/found.css"/>
+<link rel="stylesheet" href="css/demo.css"/>
+<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css"/>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript">
+
+		var setting = {
+			view: {
+				selectedMulti: false
+			},
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onCheck: onCheck
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"City & South West (D01-08)", open:true},
+			{ id:11, pId:1, name:"D01 - Boat Quay / Raffles Place / M"},
+			{ id:12, pId:1, name:"D02 - Chinatown / Tanjong Pa", open:true},
+			{ id:13, pId:1, name:"D02 - Chinatown / Tanjong Pa"},
+			{ id:2, pId:0, name:"Orchard / Holland (D09-10)", open:true},
+			{ id:21, pId:2, name:"D01 - Boat Quay / Raffles Place / M"},
+			{ id:22, pId:2, name:"D02 - Chinatown / Tanjong Pa", open:true},
+			{ id:23, pId:2, name:"D03 - Alexandra / Commonwe", checked:true},
+			{ id:3, pId:0, name:"Newton / Bt. Timah (D11, 21)", open:true},
+			{ id:31, pId:3, name:"D01 - Boat Quay / Raffles Place / M"},
+			{ id:32, pId:3, name:"D02 - Chinatown / Tanjong Pa", open:true},
+			{ id:33, pId:3, name:"D03 - Alexandra / Commonwe", checked:true},
+			{ id:4, pId:0, name:"Balestier / Geylang (D12-14)", open:true},
+			{ id:41, pId:4, name:"D01 - Boat Quay / Raffles Place / M"},
+			{ id:42, pId:4, name:"D02 - Chinatown / Tanjong Pa", open:true},
+			{ id:43, pId:4, name:"D03 - Alexandra / Commonwe", checked:true},
+			{ id:5, pId:0, name:" East Coast (D15-16)", open:true},
+			{ id:51, pId:5, name:"D01 - Boat Quay / Raffles Place / M"},
+			{ id:52, pId:5, name:"D03 - Alexandra / Commonwe", open:true},
+			{ id:53, pId:5, name:"D03 - Alexandra / Commonwe", checked:true}
+
+		];
+
+		var clearFlag = false;
+		function onCheck(e, treeId, treeNode) {
+			count();
+			if (clearFlag) {
+				clearCheckedOldNodes();
+			}
+		}
+		function clearCheckedOldNodes() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getChangeCheckedNodes();
+			for (var i=0, l=nodes.length; i<l; i++) {
+				nodes[i].checkedOld = nodes[i].checked;
+			}
+		}
+		function count() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			checkCount = zTree.getCheckedNodes(true).length,
+			nocheckCount = zTree.getCheckedNodes(false).length,
+			changeCount = zTree.getChangeCheckedNodes().length;
+			$("#checkCount").text(checkCount);
+			$("#nocheckCount").text(nocheckCount);
+			$("#changeCount").text(changeCount);
+
+		}
+		function createTree() {
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			count();
+			clearFlag = $("#last").attr("checked");
+		}
+
+		$(document).ready(function(){
+			createTree();			
+			$("#init").bind("change", createTree);
+			$("#last").bind("change", createTree);
+		});
+
+	</script>
+
+</head>
+
+<body>
+<!---------------------------header-------------------------------------->
+<div id="headers">
+  <div id="information_bar">
+     <div id="info">
+       <div id="info_left">
+         <li>List your property</li>
+         <li>Booking a property</li>
+       </div>
+       <div id="info_right">
+         <li><a href="l-r.html"><span>Login</span><span style="padding-left:45px;">Register</span></a></li>
+       </div>
+     </div>
+  </div>
+  <div id="backgroundItem">
+     <div id="navigation_bar">
+       <div id="nav">
+         <div id="nav_left">
+         <span><a href="index.html"><img src="images/logo.png" /></a></span>
+         </div>
+         <div id="nav_right">
+           <ul>        
+             <li class="c1"><a href="#" id="menv1" >TOOLS</a></li>
+             <li class="c2"><a href="new-launch.html"  id="menv2">NEW LAUNCH</a></li>
+             <li class="c3"><a href="commercial.html"  id="menv3">COMMERCIAL</a></li>
+             <li class="c4"><a href="condos.html"  id="menv4">CONDOS</a></li>
+             <li class="c5"><a href="HDB.html"  id="menv5">HDB</a></li>
+             <li class="c6"><a href="index.html"   id="menv6">HOME</a></li>
+           </ul>
+         </div>
+       </div>    
+     </div>
+     <div id="location">
+       <a href="">HOME<img src="images/arrows.png" />CONDOMINIUM</a>
+     </div>
+   </div>
+</div>
+<div class="clear"></div>
+<!----------------------------content------------------------------------>
+<div id="content">
+  <div id="content_midbody">
+    <div id="content_left" >
+      <div id="p"><p>Singapore HDB Directory</p></div>
+        <div id="div1">
+          <p style="margin-right:6px"><img src="images/chooseblue.png" /></p>
+          <p class="choose"><a href="condos2.html">Browse by District</a></p>
+          <p class="choose2"><a href="condos3.html">Browse by Alphabet</a></p>
+          <div class="clear"></div>
+          <div id="div1_box">
+            <div id="div1_box_left">
+              <li><a href="found.html">City &amp; South West(D01-08)</a></li>
+              <li><a href="found.html">Orchard / Hollad(D09-10)</a></li>
+              <li><a href="found.html">Newto / Bt.Timah(D11,21)</a></li>
+              <li><a href="found.html">North(D25-28)</a></li>
+              <li><a href="found.html">Balestier / Geylang(D12-14)</a></li>
+              <li><a href="found.html">East Coast(D15-16)</a></li>
+              <li><a href="found.html">Changi / Pasir Ris(D17-18)</a></li>
+              <li><a href="found.html">West(D22-24)</a></li>
+              <li><a href="found.html">Serangoon / Thomson(D19-20)</a></li>            
+            </div>
+         </div>
+        </div>
+        <div id="div2">
+          <p class="p1">31 Condominiums Found<span style=" float:right;">Results per page:</span></p>
+          <select name="select" id="select1">
+           <option selected="selected">10</option>
+           <option>9</option>
+           <option>8</option>
+           <option>7</option>
+          </select>
+        </div>
+        <div id="div3">
+          <div id="singular">
+            <div id="div3_left">
+              <img src="images/Condominiums Found/p1.png" />
+              <p class="left_p1">ICON</p>
+              <p class="left_p2">Location: <span style="color:#39b9e0">Gopeng Street</span></p>
+              <p class="left_p3">PSF:<span>S$966</span> 丨Tenure:<span>Freehold</span> 丨TOP:<span>2016</span></p>
+              <p class="left_p4"><a href="">View Details ></a></p>
+            </div>
+            <div id="div3_right">
+              <p>Units For Sale:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Units For Rent:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Reviews:<span style=" padding-right:55px;"></span>9<a href=""><span style=" padding-right:11px;"></span>View ></a></p>
+            </div>
+          </div>
+          <div id="nosingular">
+            <div id="div3_left">
+              <img src="images/Condominiums Found/p1.png" />
+              <p class="left_p1">ICON</p>
+              <p class="left_p2">Location: <span style="color:#39b9e0">Gopeng Street</span></p>
+              <p class="left_p3">PSF:<span>S$966</span> 丨Tenure:<span>Freehold</span> 丨TOP:<span>2016</span></p>
+              <p class="left_p4"><a href="">View Details ></a></p>
+            </div>
+            <div id="div3_right">
+              <p>Units For Sale:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Units For Rent:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Reviews:<span style=" padding-right:55px;"></span>9<a href=""><span style=" padding-right:11px;"></span>View ></a></p>
+            </div>
+          </div>
+          <div id="singular">
+            <div id="div3_left">
+              <img src="images/Condominiums Found/p1.png" />
+              <p class="left_p1">ICON</p>
+              <p class="left_p2">Location: <span style="color:#39b9e0">Gopeng Street</span></p>
+              <p class="left_p3">PSF:<span>S$966</span> 丨Tenure:<span>Freehold</span> 丨TOP:<span>2016</span></p>
+              <p class="left_p4"><a href="">View Details ></a></p>
+            </div>
+            <div id="div3_right">
+              <p>Units For Sale:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Units For Rent:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Reviews:<span style=" padding-right:55px;"></span>9<a href=""><span style=" padding-right:11px;"></span>View ></a></p>
+            </div>
+          </div>
+          <div id="nosingular">
+            <div id="div3_left">
+              <img src="images/Condominiums Found/p1.png" />
+              <p class="left_p1">ICON</p>
+              <p class="left_p2">Location: <span style="color:#39b9e0">Gopeng Street</span></p>
+              <p class="left_p3">PSF:<span>S$966</span> 丨Tenure:<span>Freehold</span> 丨TOP:<span>2016</span></p>
+              <p class="left_p4"><a href="">View Details ></a></p>
+            </div>
+            <div id="div3_right">
+              <p>Units For Sale:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Units For Rent:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Reviews:<span style=" padding-right:55px;"></span>9<a href=""><span style=" padding-right:11px;"></span>View ></a></p>
+            </div>
+          </div>
+          <div id="singular">
+            <div id="div3_left">
+              <img src="images/Condominiums Found/p1.png" />
+              <p class="left_p1">ICON</p>
+              <p class="left_p2">Location: <span style="color:#39b9e0">Gopeng Street</span></p>
+              <p class="left_p3">PSF:<span>S$966</span> 丨Tenure:<span>Freehold</span> 丨TOP:<span>2016</span></p>
+              <p class="left_p4"><a href="">View Details ></a></p>
+            </div>
+            <div id="div3_right">
+              <p>Units For Sale:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Units For Rent:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Reviews:<span style=" padding-right:55px;"></span>9<a href=""><span style=" padding-right:11px;"></span>View ></a></p>
+            </div>
+          </div>
+          <div id="nosingular">
+            <div id="div3_left">
+              <img src="images/Condominiums Found/p1.png" />
+              <p class="left_p1">ICON</p>
+              <p class="left_p2">Location: <span style="color:#39b9e0">Gopeng Street</span></p>
+              <p class="left_p3">PSF:<span>S$966</span> 丨Tenure:<span>Freehold</span> 丨TOP:<span>2016</span></p>
+              <p class="left_p4"><a href="">View Details ></a></p>
+            </div>
+            <div id="div3_right">
+              <p>Units For Sale:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Units For Rent:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Reviews:<span style=" padding-right:55px;"></span>9<a href=""><span style=" padding-right:11px;"></span>View ></a></p>
+            </div>
+          </div>
+          <div id="singular">
+            <div id="div3_left">
+              <img src="images/Condominiums Found/p1.png" />
+              <p class="left_p1">ICON</p>
+              <p class="left_p2">Location: <span style="color:#39b9e0">Gopeng Street</span></p>
+              <p class="left_p3">PSF:<span>S$966</span> 丨Tenure:<span>Freehold</span> 丨TOP:<span>2016</span></p>
+              <p class="left_p4"><a href="">View Details ></a></p>
+            </div>
+            <div id="div3_right">
+              <p>Units For Sale:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Units For Rent:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Reviews:<span style=" padding-right:55px;"></span>9<a href=""><span style=" padding-right:11px;"></span>View ></a></p>
+            </div>
+          </div>
+          <div id="nosingular">
+            <div id="div3_left">
+              <img src="images/Condominiums Found/p1.png" />
+              <p class="left_p1">ICON</p>
+              <p class="left_p2">Location: <span style="color:#39b9e0">Gopeng Street</span></p>
+              <p class="left_p3">PSF:<span>S$966</span> 丨Tenure:<span>Freehold</span> 丨TOP:<span>2016</span></p>
+              <p class="left_p4"><a href="">View Details ></a></p>
+            </div>
+            <div id="div3_right">
+              <p>Units For Sale:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Units For Rent:&nbsp;&nbsp;&nbsp;&nbsp;164<a href="">View ></a></p>
+              <p>Reviews:<span style=" padding-right:55px;"></span>9<a href=""><span style=" padding-right:11px;"></span>View ></a></p>
+            </div>
+          </div>
+          <div id="page">
+            <img src="images/page.png" />
+          </div>
+        </div>
+    </div>
+    <div id="content_right" >
+     <form>
+      <div id="content_right_search">
+      <input type="text" id="search_text" value="Key in HDB estate" /><input type="button" id="search_button" />
+      <p style=" float:left; margin-right:35px;">Select District(s)</p><p ><a href="" style=" text-decoration:none; color:#39b9e0; font-size:14px">District Map ></a></p>
+      <ul id="treeDemo" class="ztree"></ul>
+      <div style=" height:310px;">
+        <p>Tenure</p>
+                    <select name="select" id="select1">
+                     <option selected="selected">Select Tenure</option>
+                     <option>bbbbb</option>
+                     <option>cccccc</option>
+                     <option>ddddd</option>
+                    </select>
+        <p>Condo Age</p>
+                    <select name="select" id="select1">
+                     <option selected="selected">Select Age</option>
+                     <option>bbbbb</option>
+                     <option>cccccc</option>
+                     <option>ddddd</option>
+                    </select>
+        <p>Min. P SF Value </p>
+                    <select name="select" id="select1">
+                     <option selected="selected">any</option>
+                     <option>bbbbb</option>
+                     <option>cccccc</option>
+                     <option>ddddd</option>
+                    </select>
+        <p>Max.P SF Value</p>
+                    <select name="select" id="select1">
+                     <option selected="selected">any</option>
+                     <option>bbbbb</option>
+                     <option>cccccc</option>
+                     <option>ddddd</option>
+                    </select>
+      </div>
+       <div><a href="#" id="search">Search</a></div>
+      </div> 
+      </form>
+    </div>
+  </div>
+ <div class="clear"></div>
+</div>
+<input name="menvitem" type="hidden" id="menvitem" value="4" />
+<!----------------------------footer------------------------------------>
+
+<div id="footer">
+  <div id="footer_top">
+    <div id="footer_top_mid">
+    <div>
+    <p><img src="images/logo.png"/></p>
+    <li>This is gravida vel version of Lorem Ipsum.</li>
+    <li>proin gravida nibh vel velit auctor aliquet.</li>
+    <li>Aenean sollicitudin lorem quis.</li>
+    </div>
+    <div>
+    <p>Recent Posts</p>
+    <li><img src="images/arrows.png" />New Search Platform Update</li>
+    <li><img src="images/arrows.png" />Platform Most Wante-$5,000 for Ghost Platform</li>
+    <li><img src="images/arrows.png" />Update: version of Lorem Submission Requirements</li>
+    </div>
+    <div style="width:280px;">
+    <p>Contact Info</p>
+    <li class="f1">65 123 456 789</li>
+    <li class="f2"><a href="">admin@ministryofsingaporeproperty.com</a></li>
+    <li class="f3">900 123 456 789</li>
+    </div>
+    <div>
+    <p>Newsletter</p>
+    <li>This is gravida vel version of Lorem Ipsum.</li>
+    <li>proin gravida nibh vel velit auctor aliquet.</li>
+    <li><input type="text" id="text" value="e-mail" /><input type="submit" id="submit" value="submit" /></li>
+    </div>
+    </div>
+  </div>
+  <div id="footer_bottom"><span> ©</span> 2014 Real Estate,All Rights Reserved</div>
+</div>
+
+</body>
+</html>
